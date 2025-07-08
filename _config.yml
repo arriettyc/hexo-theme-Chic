@@ -1,5 +1,5 @@
 # Header
-navname: "知りたいままり | Xin's Notebook"
+navname: "知りたいままに | Xin's Notebook"
 
 # navigatior items
 nav:
@@ -33,7 +33,7 @@ links:
   # RSS:
   # AliPay:
   # ZhiHu: 
-  # LinkedIn:
+  LinkedIn: https://www.linkedin.com/in/arriettyc/
   # FaceBook:
   # Twitter:
   # Skype:
@@ -94,12 +94,26 @@ scripts:
     # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
     # https://github.com/tscanlin/tocbot
 
+# Markdown
+markdown_it:
+  html: true # Allow HTML tags (important for MathJax to inject its elements)
+  xhtmlOut: false
+  breaks: true # Set to false if you still see <br> tags within math blocks after this fix
+  langPrefix: lang-
+  linkify: true
+  typographer: true
+  quotes: '“”‘’'
+  plugins:
+    - markdown-it-mathjax3 # Enable the mathjax3 plugin for markdown-it
 
-# plugin functions
-## Mathjax: Math Formula Support
-## https://www.mathjax.org
+# Existing Math Formulas Render Support from your image_450a05.png:
+math:
+  per_page: true # Keep this if you want math only on specific posts.
+
 mathjax:
-  enable: true
-  import: demand # global or demand
-  ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
-  ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
+  enable: true # Keep this. Your theme likely uses this to conditionally load MathJax.
+  import: demand
+
+katex:
+  enable: false # Ensure KaTeX is disabled
+  copy_tex: false

@@ -53,11 +53,11 @@ if (is_archive()){
     <% }); %>
 <% } %>
 <%# mathjax support %>
-<% if(theme.mathjax.enable!==null&&theme.mathjax.enable===true){ %>
+<% if(config.mathjax.enable!==null&&config.mathjax.enable===true){ %>
     <%# import mathjax method: global or demand %>
-    <% if(theme.mathjax.import === 'global'){ %>
+    <% if(config.mathjax.import === 'global'){ %>
         <%- partial('_plugins/mathjax.ejs') %>
-    <% } else if(theme.mathjax.import === 'demand'){ %>
+    <% } else if(config.mathjax.import === 'demand'){ %>
         <% if (page.mathjax){ %>
             <%- partial('_plugins/mathjax.ejs') %>
         <% } %>
